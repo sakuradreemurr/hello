@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Click Me!</title>
+	<style>
+		#click-me-button {
+			font-size: 16px;
+			cursor: pointer;
+			border: none;
+			background-color: transparent;
+			text-decoration: underline;
+			font-family: Arial, sans-serif;
+		}
+		#rick {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<iframe id="rick" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+	<button id="click-me-button">Click Me!</button>
+
+	<script>
+		document.getElementById("click-me-button").addEventListener("click", function() {
+			const rick = document.getElementById("rick");
+			rick.style.display = "block";
+			rick.requestFullscreen();
+		});
+	</script>
+</body>
+</html>
